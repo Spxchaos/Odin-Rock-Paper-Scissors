@@ -1,8 +1,48 @@
 console.log("Hello World");
 
-/*function playRound(humanChoice, computerChoice){
+function playRound(humanChoice, computerChoice){
 
-}*/
+    let humanScore = 0;
+    let compScore = 0;
+
+    if (humanChoice == 'rock' && computerChoice == 'paper'){
+        console.log("YOU LOSE!, PAPER BEATS ROCK");
+        compScore++;
+    }
+    else if (humanChoice == 'rock' && computerChoice == 'scissors'){
+        console.log("YOU WIN!, ROCK BEATS SCISSORS");
+        humanScore++;
+    }
+    else if (humanChoice == 'rock' && computerChoice == 'rock'){
+        console.log("IT'S A TIE!");
+    }
+
+    else if (humanChoice == 'paper' && computerChoice == 'rock'){
+        console.log("YOU WIN!, PAPER BEATS ROCK");
+        humanScore++;
+    }
+    else if (humanChoice == 'paper' && computerChoice == 'scissors'){
+        console.log("YOU LOSE!, SCISSORS BEAT PAPER");
+        compScore++;
+    }
+    else if (humanChoice == 'paper' && computerChoice == 'paper'){
+        console.log("IT'S A TIE!");
+    }
+
+    else if (humanChoice == 'scissors' && computerChoice == 'paper'){
+        console.log("YOU WIN!, SCISSORS BEAT PAPER");
+        humanScore++;
+    }
+    else if (humanChoice =='scissors'&& computerChoice == 'rock'){
+        console.log("BOO! YOU LOSE! ROCK BEATS SCISSOR");
+        compScore++;
+    }
+     else if (humanChoice =='scissors'&& computerChoice == 'scissors'){
+        console.log("IT'S A TIE! LESBIANS LOVE THIS");
+    }
+
+
+}
 
 function getHumanChoice(){
 
@@ -23,20 +63,20 @@ function getHumanChoice(){
 
 function getComputerChoice(){
 
-    let z = Math.random() * 10;
-    console.log(z);
+    let z = Math.random() * 10; //multiplied by 10 to increase the range
+    //console.log(z); had used this to check values and correlate them with the given output
 
-    if(z>= 0 && z<= 3){
-     console.log('rock');
+    if(z>= 0 && z < 3){
+     return 'rock';
     }
 
-    else if (z>=3 && z<=6){
-        console.log('paper');
+    else if (z>=3 && z< 6){
+        return 'paper';
     }
 
-    else
+    else 
     {
-        console.log('scissors');
+        return 'scissors';
     }
 
 
@@ -51,4 +91,4 @@ function getComputerChoice(){
 
 //getHumanChoice();
 
-getComputerChoice();
+//getComputerChoice();
