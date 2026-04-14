@@ -110,13 +110,13 @@ function getComputerChoice(){
 }
 
 function playGame(){
-    for(let i = 0; i < 5;i++){
+    //for(let i = 0; i < 5;i++){
         
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
  
         playRound(humanSelection,computerSelection);
-    }
+    
     if (humanScore>compScore){
     console.log("YOU WIN THE MATCH, HURRAY");
         }
@@ -126,6 +126,8 @@ function playGame(){
     else{
     console.log("ITS A TIE");
         } 
+
+    //}
 }
 
 
