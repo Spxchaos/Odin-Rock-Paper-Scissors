@@ -9,6 +9,7 @@ console.log("Hello World");
 
 function playRound(humanChoice, computerChoice){
 
+    comp.innerText = `computer choice: ${computerChoice}`;
 
     if (humanChoice == 'rock' && computerChoice == 'paper'){
         console.log("YOU LOSE!, PAPER BEATS ROCK");
@@ -149,6 +150,9 @@ const scissor = document.querySelector('#scissor');
 const log = document.querySelector('#log');
 const win = document.querySelector('#win');
 const reset = document.querySelector('#reset');
+const comp = document.querySelector('#comp');
+
+comp.innerText = `Computer Choice: `
 
 log.innerText = `compScore: ${compScore}
                  humanScore ${humanScore}`;
@@ -211,6 +215,7 @@ reset.addEventListener("click", ()=>{
                     humanScore ${humanScore = 0}`; //resets comp and human scores along with the win 
 
     win.innerText = ``;
+    comp.innerText = `Computer Choice: `;
     enableButtons();
 
 
