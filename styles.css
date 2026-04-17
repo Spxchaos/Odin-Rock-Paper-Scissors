@@ -55,8 +55,15 @@ button:hover {
   font-size: 20px;
 }
 
-  
+#lines {
+    margin-top: 20px;
+    font-size: 22px;
+}
 
+#comp {
+    margin-top: 20px;
+    font-size: 22px;
+}
 
 #reset {
     margin-top: 30px;
