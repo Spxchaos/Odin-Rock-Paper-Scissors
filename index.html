@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="javascript.js" defer></script>
-    <style>
-        body{
-            background-color: lightgray;
-        }
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 50vh;
-        }
-
-    </style>
-    
+    <link rel ='stylesheet' href="styles.css">
     <title>Rock Paper Scissor</title>
 </head>
 <body>
+    <header class = "header">
+    <h1 class="title">ROCK PAPER SCISSORS</h1>
+    </header>
     <div id = 'comp'></div>
     <div>
     <button id = "rock">Rock</button>
@@ -32,5 +23,12 @@
 
     <div id="log"></div>
     <div id = 'win'></div>
+    <footer class="footer"><p>copyright ©
+    <script>
+        document.write(new Date.getFullYear());
+        </script>
+        Aman Shivaprasad Naik
+        </p>
+        </footer>
 </body>
 </html>

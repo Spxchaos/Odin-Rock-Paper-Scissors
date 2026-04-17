@@ -2,14 +2,14 @@ console.log("Hello World");
 
     let humanScore = 0;
     let compScore = 0;
-    let flag = false;
+
 
 
 
 
 function playRound(humanChoice, computerChoice){
 
-    comp.innerText = `computer choice: ${computerChoice}`;
+    comp.innerText = `Computer Choice: ${computerChoice}`;
 
     if (humanChoice == 'rock' && computerChoice == 'paper'){
        lines.innerText = "YOU LOSE!, PAPER BEATS ROCK";
@@ -89,20 +89,17 @@ function getComputerChoice(){
     let z = Math.random() * 10; //multiplied by 10 to increase the range
     //console.log(z); had used this to check values and correlate them with the given output
 
-    if(z>= 0 && z < 3){
-        console.log('rock');
+    if(z>= 0 && z < 3){ 
         
      return 'rock';
     }
 
     else if (z>=3 && z< 6){
-        console.log('paper');
         return 'paper';
     }
 
     else 
     {
-        console.log('scissors');
         return 'scissors';
     }
 
@@ -153,19 +150,19 @@ const reset = document.querySelector('#reset');
 const comp = document.querySelector('#comp');
 const lines = document.querySelector('#lines');
 
-lines.innerText = `PLAYER CHOOSE`;
+lines.innerText = `PLAYER PLEASE CHOOSE`;
 
 comp.innerText = `Computer Choice: `
 
-log.innerText = `compScore: ${compScore}
-                 humanScore ${humanScore}`;
+log.innerText = `Computer Score: ${compScore}
+                 Your Score: ${humanScore}`;
 
 rock.addEventListener('click', () => {
     if (5 >= humanScore && 5 >= compScore){
     playRound("rock", getComputerChoice());
     log.innerText = `
-                    compScore: ${compScore}
-                    humanScore ${humanScore}`
+                    Computer Score: ${compScore}
+                    Your Score: ${humanScore}`
 
     }
                     winDeclaration();
@@ -177,8 +174,8 @@ paper.addEventListener('click', () => {
     if (5 >= humanScore && 5 >= compScore){
     playRound("paper", getComputerChoice());
         log.innerText = ` 
-                    compScore: ${compScore}
-                    humanScore ${humanScore}`
+                    Computer Score: ${compScore}
+                    Your Score: ${humanScore}`
 
     }
                     winDeclaration();
@@ -192,8 +189,8 @@ scissor.addEventListener('click', () => {
     
     playRound("scissors", getComputerChoice());
         log.innerText = `
-                    compScore: ${compScore}
-                    humanScore ${humanScore}`
+                    Computer Score: ${compScore}
+                    Your Score: ${humanScore}`
     }
                 winDeclaration();
     //console.log('scissors');
@@ -203,22 +200,22 @@ scissor.addEventListener('click', () => {
 
 function winDeclaration(){
 if( compScore === 5){
-     win.innerText = `You Lose Comp Wins`;
+     win.innerText = `You Lose!BOO!, Comp Wins`;
     disableButtons();
 }
 else if (humanScore === 5){
-        win.innerText = `You Win Comp Loses`;
+        win.innerText = `You Win!!,  Comp Loses`;
         disableButtons();
 }
 
 }
 
 reset.addEventListener("click", ()=>{
-   log.innerText = `compScore: ${compScore = 0}         
-                    humanScore ${humanScore = 0}`; //resets comp and human scores along with the win 
+   log.innerText = `Computer Score: ${compScore = 0}         
+                    Your Score ${humanScore = 0}`; //resets comp and human scores along with the win 
 
     win.innerText = ``;
-    lines.innerText = `PLAYER CHOOSE`;
+    lines.innerText = `PLAYER PLEASE CHOOSE`;
     comp.innerText = `Computer Choice: `;
     enableButtons();
 
